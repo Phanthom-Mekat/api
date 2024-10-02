@@ -20,5 +20,11 @@ function loadUser(){
 }
 
 function display(data){
-    console.log(data)
+    const ul = document.getElementById('userList');
+    for(let dat of data ){
+        console.log(dat)
+        const li = document.createElement('li');
+        li.innerText= dat.email;
+        ul.appendChild(li)
+    }
 }
